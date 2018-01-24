@@ -1,0 +1,20 @@
+{
+  "extends": "../../../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../../../dist/out-tsc/apps/meerkat-recordings",
+    "module": "es2015"
+  },
+  "include": [
+    "**/*.ts"
+    /* add all lazy-loaded libraries here: "../../../libs/my-lib/index.ts" */
+  
+    , "../../../libs/meerkat-recordings/home/index.ts"
+
+    , "../../../libs/meerkat-recordings/artists/index.ts"
+
+    , "../../../libs/meerkat-recordings/releases/index.ts"
+],
+  "exclude": [
+    "**/*.spec.ts"
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "$schema": "./node_modules/@nrwl/schematics/src/schema.json",
+  "project": {
+    "name": "meerkat-recordings",
+    "npmScope": "meerkat-recordings",
+    "latestMigration": "20180121-update-testjs"
+  },
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "./tsconfig.spec.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "apps/meerkat-recordings/src/tsconfig.app.json",
+      "exclude": "**/node_modules/**"
+    },
+    {
+      "project": "apps/meerkat-recordings/e2e/tsconfig.e2e.json",
+      "exclude": "**/node_modules/**"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "schematics": {
+      "collection": "@nrwl/schematics",
+      "postGenerate": "npm run format",
+      "newProject": [
+        "app",
+        "lib"
+      ]
+    },
+    "styleExt": "scss",
+    "component": {}
+  },
+  "warnings": {
+    "typescriptMismatch": false
+  },
+  "apps": [
+    {
+      "name": "meerkat-recordings",
+      "root": "apps/meerkat-recordings/src",
+      "outDir": "dist/apps/meerkat-recordings",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "../../../test.js",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "../../../tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "styles.scss"
+      ],
+      "scripts": [],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    },
+    {
+      "name": "data-models",
+      "root": "libs/data-models/src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "material",
+      "root": "libs/material/src",
+      "test": "../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "meerkat-recordings/artists",
+      "root": "libs/meerkat-recordings/artists/src",
+      "test": "../../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "meerkat-recordings/home",
+      "root": "libs/meerkat-recordings/home/src",
+      "test": "../../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "meerkat-recordings/layout",
+      "root": "libs/meerkat-recordings/layout/src",
+      "test": "../../../../test.js",
+      "appRoot": ""
+    },
+    {
+      "name": "meerkat-recordings/releases",
+      "root": "libs/meerkat-recordings/releases/src",
+      "test": "../../../../test.js",
+      "appRoot": ""
+    }
+  ]
+}
