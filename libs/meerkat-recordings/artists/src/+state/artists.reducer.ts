@@ -1,8 +1,11 @@
-import { Artists } from './artists.interfaces';
-import * as artistsActions from './artists.actions';
-import { adapter } from './artists.init';
+import { Artists } from "./artists.interfaces";
+import * as artistsActions from "./artists.actions";
+import { adapter } from "./artists.init";
 
-export function artistsReducer(state: Artists, action: artistsActions.ArtistsActions): Artists {
+export function artistsReducer(
+  state: Artists,
+  action: artistsActions.ArtistsActions
+): Artists {
   switch (action.type) {
     case artistsActions.ArtistsActionTypes.LoadArtists: {
       return { ...state, loading: true };
@@ -18,7 +21,7 @@ export function artistsReducer(state: Artists, action: artistsActions.ArtistsAct
   }
 }
 
-export const getSelectedArtistId = (state: Artists) => state.selectedArtistId;
+export const getSelectedArtistId = (state: Artists) => state.id;
 
 export const {
   // select the array of Artist ids

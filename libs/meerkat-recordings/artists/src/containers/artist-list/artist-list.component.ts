@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Store } from '@ngrx/store';
+import { Artist } from '@meerkat-recordings/data-models';
+import { Router } from '@angular/router';
+import { ArtistsState, Artists } from './../../+state/artists.interfaces';
+import { selectAllArtists } from './../../+state';
+import * as artistsActions from './../../+state/artists.actions';
 
 @Component({
   selector: 'app-artist-list',
@@ -6,7 +12,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./artist-list.component.scss']
 })
 export class ArtistListComponent implements OnInit {
-  constructor() {}
+  artists$: Store<Artists>;
 
-  ngOnInit() {}
+  constructor(private router: Router, private store: Store<ArtistsState>) {}
+
+  ngOnInit() {
+    // this.artists$ = this.store.select(selectAllArtists);
+    this.artists$ = this.store.select(state => state.artists);
+  }
 }

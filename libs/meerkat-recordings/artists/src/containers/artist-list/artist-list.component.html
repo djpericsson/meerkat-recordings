@@ -1,4 +1,4 @@
 <p>
   artist-list works!
 </p>
-{{artist$ | async | json}}
+{{(artists$ | async)?.entities | json}}

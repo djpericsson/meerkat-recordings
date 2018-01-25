@@ -1,11 +1,11 @@
-import { Action } from '@ngrx/store';
+import { Action } from "@ngrx/store";
 import { Artist } from "@meerkat-recordings/data-models";
 
 export enum ArtistsActionTypes {
-  LoadArtists = '[Artists] Load',
-  LoadArtistsSuccess = '[Artists] Load Sucess',
-  LoadArtistsFail = '[Artists] Load Fail',
-  SetArtistsFilter = '[Artists] Set Filter'
+  LoadArtists = "[Artists] Load",
+  LoadArtistsSuccess = "[Artists] Load Success",
+  LoadArtistsFail = "[Artists] Load Fail"
+  // SetArtistsFilter = '[Artists] Set Filter'
 }
 
 export class LoadArtistsAction implements Action {
@@ -18,17 +18,17 @@ export class LoadArtistsSuccessAction implements Action {
 }
 
 export class LoadArtistsFailAction implements Action {
-  readonly type = ArtistsActionTypes.LoadArtistsSuccess;
+  readonly type = ArtistsActionTypes.LoadArtistsFail;
   constructor(public payload: any) {}
 }
 
-export class SetArtistsFiltersAction {
-  readonly type = ArtistsActionTypes.SetArtistsFilter;
-  constructor(public payload: string) {}
-}
+// export class SetArtistsFiltersAction {
+//   readonly type = ArtistsActionTypes.SetArtistsFilter;
+//   constructor(public payload: string) {}
+// }
 
 export type ArtistsActions =
   | LoadArtistsAction
   | LoadArtistsSuccessAction
-  | LoadArtistsFailAction
-  | SetArtistsFiltersAction;
+  | LoadArtistsFailAction;
+// | SetArtistsFiltersAction;
