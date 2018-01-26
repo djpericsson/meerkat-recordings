@@ -13,26 +13,26 @@ import { ArtistListComponent } from "../containers/artist-list/artist-list.compo
 
 @Injectable()
 export class ArtistsEffects {
-  // @Effect()
-  // loadData = this.dataPersistence.fetch(
-  //   artistsActions.ArtistsActionTypes.LoadArtists,
-  //   {
-  //     run: (action: artistsActions.LoadArtistsAction, state: ArtistsState) => {
-  //       return this.artistsService
-  //         .getArtists()
-  //         .pipe(
-  //           map(
-  //             (artists: Artist[]) =>
-  //               new artistsActions.LoadArtistsSuccessAction(artists)
-  //           )
-  //         );
-  //     },
+  @Effect()
+  loadData = this.dataPersistence.fetch(
+    artistsActions.ArtistsActionTypes.LoadArtists,
+    {
+      run: (action: artistsActions.LoadArtistsAction, state: ArtistsState) => {
+        return this.artistsService
+          .getArtists()
+          .pipe(
+            map(
+              (artists: Artist[]) =>
+                new artistsActions.LoadArtistsSuccessAction(artists)
+            )
+          );
+      },
 
-  //     onError: (action: artistsActions.LoadArtistsAction, error) => {
-  //       return new artistsActions.LoadArtistsFailAction(error);
-  //     }
-  //   }
-  // );
+      onError: (action: artistsActions.LoadArtistsAction, error) => {
+        return new artistsActions.LoadArtistsFailAction(error);
+      }
+    }
+  );
 
   @Effect()
   loadartistsFromRoute = this.dataPersistence.navigation(ArtistListComponent, {

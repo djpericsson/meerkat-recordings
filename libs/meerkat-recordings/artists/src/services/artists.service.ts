@@ -6,7 +6,6 @@ export class ArtistsService {
   constructor(private httpClient: HttpClient) {}
 
   getArtists() {
-    console.log('in service');
     return this.httpClient.get(`http://localhost:4200/assets/artists.json`);
   }
 

@@ -5,7 +5,6 @@ export enum ArtistsActionTypes {
   LoadArtists = "[Artists] Load",
   LoadArtistsSuccess = "[Artists] Load Success",
   LoadArtistsFail = "[Artists] Load Fail"
-  // SetArtistsFilter = '[Artists] Set Filter'
 }
 
 export class LoadArtistsAction implements Action {
@@ -22,13 +21,7 @@ export class LoadArtistsFailAction implements Action {
   constructor(public payload: any) {}
 }
 
-// export class SetArtistsFiltersAction {
-//   readonly type = ArtistsActionTypes.SetArtistsFilter;
-//   constructor(public payload: string) {}
-// }
-
 export type ArtistsActions =
   | LoadArtistsAction
   | LoadArtistsSuccessAction
   | LoadArtistsFailAction;
-// | SetArtistsFiltersAction;

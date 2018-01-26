@@ -21,7 +21,7 @@ export function artistsReducer(
   }
 }
 
-export const getSelectedArtistId = (state: Artists) => state.id;
+// export const getSelectedArtistId = (state: Artists) => state.selectedArtistId;
 
 export const {
   // select the array of Artist ids

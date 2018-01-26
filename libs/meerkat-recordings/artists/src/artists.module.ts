@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     RouterModule.forChild([{ path: '', pathMatch: 'full', component: ArtistListComponent }]),
     StoreModule.forFeature('artists', artistsReducer, { initialState: artistsInitialState }),
-    EffectsModule.forRoot([ArtistsEffects]),
+    EffectsModule.forFeature([ArtistsEffects]),
     MaterialModule
   ],
   declarations: [ArtistListComponent],

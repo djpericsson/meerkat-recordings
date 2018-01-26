@@ -5,8 +5,5 @@ import { Artist } from "@meerkat-recordings/data-models";
 export const adapter: EntityAdapter<Artist> = createEntityAdapter<Artist>();
 
 export const artistsInitialState: Artists = adapter.getInitialState({
-  id: null,
-  name: "",
-  country: "none",
   loading: false
 });
