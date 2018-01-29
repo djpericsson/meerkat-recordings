@@ -1,5 +1,34 @@
 <p>
   artist-list works!
 </p>
-{{artists$ | async | json}}
-<!-- {{(artists$ | async)?.entities | json}} -->
+
+<mat-card>
+  <mat-card-title>Artists</mat-card-title>
+  <mat-card-content class="demo-basic-list">
+    <mat-grid-list cols="3">
+      <mat-grid-tile *ngFor="let artist of (artists$ | async)">
+        <mat-card class="artist-card">
+          <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{(artist)?.name}}</mat-card-title>
+            <mat-card-subtitle>{{(artist)?.genre}}</mat-card-subtitle>
+          </mat-card-header>
+          <a href="{{(artist)?.soundcloud}}" target="_blank" title="Go to Soundcloud page">
+            <img mat-card-image src="{{(artist)?.image}}" alt="Photo of {{(artist)?.name}}" class="artist-img">
+          </a>
+          <mat-card-content>
+            <p>
+              {{(artist)?.description}}
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <img src="https://meerkatrecordings.azurewebsites.net/images/soundcloud.png" style='width:5%;height:5%' />&nbsp;&nbsp;
+            <a smart-link href="{{(artist)?.soundcloud}}" target="_blank">Go to artist Soundcloud page</a>
+            <!-- <button mat-button>LIKE</button>
+                  <button mat-button>SHARE</button> -->
+          </mat-card-actions>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </mat-card-content>
+</mat-card>

@@ -10,6 +10,7 @@ import { environment } from "../environments/environment";
 import { StoreRouterConnectingModule } from "@ngrx/router-store";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { LayoutModule } from "@meerkat-recordings/meerkat-recordings/layout";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   imports: [
@@ -42,7 +43,8 @@ import { LayoutModule } from "@meerkat-recordings/meerkat-recordings/layout";
     !environment.production ? StoreDevtoolsModule.instrument() : [],
     StoreRouterConnectingModule,
     BrowserAnimationsModule,
-    LayoutModule
+    LayoutModule,
+    NgbModule.forRoot()
   ],
   declarations: [AppComponent],
   bootstrap: [AppComponent]

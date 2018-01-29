@@ -12,6 +12,7 @@ import * as artistsActions from './../../+state/artists.actions';
   styleUrls: ['./artist-list.component.scss']
 })
 export class ArtistListComponent implements OnInit {
+
   artists$: Store<Artist[]>;
 
   constructor(private router: Router, private store: Store<ArtistsState>) {}

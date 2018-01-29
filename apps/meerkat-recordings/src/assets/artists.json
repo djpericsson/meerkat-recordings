@@ -2,11 +2,56 @@
     {
       "id": 1,
       "name": "Aimnbreak",
-      "country": "Sweden"
+      "country": "Sweden",
+      "genre": "Drum & Bass, Dub, Electronic",
+      "description": "Aimnbreak makes intense and drum driven music for stressed out urban souls. Like Rhitalin for ADHD. He is the former drummer and producer that finally emerges from the background while foregrounding the drums.",
+      "image": "./assets/images/artists/aimnbreak.jpg",
+      "soundcloud": "https://soundcloud.com/aimnbreak"
     },
     {
       "id": 2,
       "name": "Gavana",
-      "country": "Sweden"
+      "country": "Sweden",
+      "genre": "Dancehall, House, Electronic",
+      "description": "Being a DJ, producer, remixer, music culture researcher as well as a label owner, Anna Gavanas is a mainstay of the Swedish electronic music scene. When producing, her perfect sense for musical intensity and mellowness guarantees a captivating listening experience.",
+      "image": "./assets/images/artists/gavana.jpg",
+      "soundcloud": "https://soundcloud.com/gavana"
+    },
+    {
+      "id": 3,
+      "name": "Sidstar",
+      "country": "Sweden",
+      "genre": "Chiptune, Dub",
+      "description": "Sidstar has a weakness for happy - go - lucky melodies and naive songs, oscillating between electro dub, hip hop beats and live jammed crazyness.",
+      "image": "./assets/images/artists/sidstar.jpg",
+      "soundcloud": "https://soundcloud.com/sidstar"
+    }
+    ,
+    {
+      "id": 4,
+      "name": "Nuphlo",
+      "country": "United Kingdom",
+      "genre": "Drum & Bass, Asian Underground",
+      "description": "Nuphlo's style is a delicate balance of eastern melodies, innovative beats and low subs.",
+      "image": "./assets/images/artists/nuphlo.jpg",
+      "soundcloud": "https://soundcloud.com/nuphlo"
+    },
+    {
+      "id": 5,
+      "name": "Ombudsman",
+      "country": "Sweden",
+      "genre": "IDM, ELectronic",
+      "description": "Ombudsman is one of Swedens finest IDM/Electronic producers.",
+      "image": "./assets/images/artists/ombudsman.jpg",
+      "soundcloud": "https://soundcloud.com/ombud"
+    },
+    {
+      "id": 6,
+      "name": "Wirefire",
+      "country": "Sweden",
+      "genre": "Rave, Acid, Jungle",
+      "description": "Wirefire is inspired by funky acid lines, old school jungle breaks and hardcore elements, blazes with 303 acid lines, happy-go-lucky melodies and irresistible breaks.",
+      "image": "./assets/images/artists/wirefire.jpg",
+      "soundcloud": "https://soundcloud.com/wirefirerave"
     }
   ]

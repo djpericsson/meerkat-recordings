@@ -10,6 +10,7 @@ import { ArtistsEffects } from './+state/artists.effects';
 import { ArtistsService } from './services/artists.service';
 import { MaterialModule } from '@meerkat-recordings/material';
 import { HttpClientModule } from '@angular/common/http';
+import {MatGridListModule} from '@angular/material/grid-list';
 
 @NgModule({
   imports: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     RouterModule.forChild([{ path: '', pathMatch: 'full', component: ArtistListComponent }]),
     StoreModule.forFeature('artists', artistsReducer, { initialState: artistsInitialState }),
     EffectsModule.forFeature([ArtistsEffects]),
-    MaterialModule
+    MaterialModule,
+    MatGridListModule
   ],
   declarations: [ArtistListComponent],
   providers: [ArtistsEffects, ArtistsService]
